@@ -7,7 +7,8 @@ export default function TabLayout() {
 
   const segment = useSegments();
   const hideTabBar =
-  segment[1] === "practice" && segment[2] === "detail";
+  segment[1] === "practice" && segment[2] === "detail" ||
+  segment[1] === "study" && segment[2] === "detail";
 
   return (
     <Tabs tabBar={(props) => <TabBar {...props} visible={!hideTabBar} />}>

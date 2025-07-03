@@ -29,7 +29,7 @@ const TabBar = (props: TabBarProps) => {
             : route.name;
         if (
           ["_sitemap", "+not-found"].includes(route.name) ||
-          route.name.includes("/")
+          route.name.includes('/') || route.name.includes('modals')
         )
           return null;
 
@@ -62,7 +62,7 @@ const TabBar = (props: TabBarProps) => {
             onLongPress={onLongPress}
             isFocused={isFocused}
             routeName={route.name}
-            color={isFocused ? Colors[colorScheme ?? "light"].primary : "white"}
+            color={Colors[colorScheme ?? "light"].background}
             label={typeof label === "string" ? label : route.name}
           />
         );
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginHorizontal: 20,
-    paddingVertical: 15,
-    borderRadius: 25,
+    paddingVertical: 16,
+    borderRadius: 50,
     borderCurve: "continuous",
     shadowColor: "black",
     shadowOffset: { width: 0, height: 10 },

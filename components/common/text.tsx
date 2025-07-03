@@ -1,4 +1,3 @@
-import { useThemeColor } from "@/components/Themed";
 import { Text as DefaultText, TextStyle } from "react-native";
 
 interface TextProps {
